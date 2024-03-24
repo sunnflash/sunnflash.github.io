@@ -1,17 +1,66 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>index</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Div布局网页示例</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .sidebar {
+        width: 15%;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+    .content {
+        width: 75%;
+        padding: 10px;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
 </head>
-
 <body>
-<h1><strong><em>hello world!</em></strong></h1>
-<p><a href="bolg/blog_index.html">blog</a></p>
-<p>this is sw</p>
-<p>I am currently reconstructing my website, please wait and see.</p>
-<p>&nbsp;</p>
-
-
+    <div class="header">
+        <h1><strong><em>hello world!</em></strong></h1>
+    </div>
+<div class="container">
+        <div class="sidebar">
+            <h2><a href="bolg/blog_index.html">blog</a></h2>
+        </div>
+        <div class="content">
+            <p>this is sw</p>
+            <p>I am currently reconstructing my website, please wait and see.</p>
+            <p></p>
+            <h2>&nbsp;</h2>
+        </div>
+</div>
+    <div class="footer">
+        <p>nice to meet you    </p>
+    </div>
 </body>
 </html>
