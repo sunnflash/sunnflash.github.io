@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Password Protected Content</title>  
+<style>  
+    #content {  
+        display: none; 
+        margin-top: 20px;  
+        padding: 10px;  
+        border: 1px solid #ccc;  
+    }  
+</style>  
+</head>  
+<body>  
+  <h2>Please enter the password to access the site:</h2>
+<input type="password" id="passwordInput" placeholder="my birthday">  
+<button onclick="checkPassword()">Submit</button>  
+<p id="message"></p>  
+  
+<div id="content">  
+    <h1>This is my blog</h1>
+<p><a href="diary_03_19.html">2024_03_19</a></p>
+<p><a href="diary_03_20.html">2024_03_20</a></p>
+<p><a href="diary_03_21.html">diary_03_21</a></p>
+<p>  <a href="weekly_summary_03_25.html">weekly_summary_03_25</a></p>
+<p><a href="diary_03_26.html">diary_03_26</a></p>
+<p><a href="diary_03_27.html">diary_03_27</a></p>
+<p><a href="dairy_03_28.html">dairy_03_28</a></p>
+<p><a href="dairy_03_29.html">dairy_03_29</a></p>
+</div>  
+  
+<p>
+  <script>  
+    function checkPassword() {  
+        var password = document.getElementById("passwordInput").value;  
+        var messageElement = document.getElementById("message");  
+        var contentElement = document.getElementById("content");  
+          
+        if (password === "20041019") {  
+            messageElement.innerText = "Correct password! You can access the site.";  
+            contentElement.style.display = "block"; 
+        } else {  
+            messageElement.innerText = "Incorrect password. Please try again.";  
+            contentElement.style.display = "none"; 
+        }  
+        document.getElementById("passwordInput").value = "";  
+    }  
+  </script>  
+  
+</p>
+<p>please do not view source code&lt;doge&gt;</p>
+</body>  
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Password Protection</title>
+</head>
+<body>
+    <h2>Please enter the password to access the site:</h2>
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="message"></p>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            
+            if (password === "20041019") {
+                document.getElementById("message").innerText = "Correct password! You can access the site.";
+            } else {
+                document.getElementById("message").innerText = "Incorrect password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
