@@ -1,11 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>blog_index</title>
-</head>
-<body>
-<h1>This is my blog</h1>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Password Protected Content</title>  
+<style>  
+    #content {  
+        display: none; 
+        margin-top: 20px;  
+        padding: 10px;  
+        border: 1px solid #ccc;  
+    }  
+</style>  
+</head>  
+<body>  
+  <h2>Please enter the password to access the site:</h2>
+<input type="password" id="passwordInput" placeholder="my birthday">  
+<button onclick="checkPassword()">Submit</button>  
+<p id="message"></p>  
+  
+<div id="content">  
+    <h1>This is my blog</h1>
 <p><a href="diary_03_19.html">2024_03_19</a></p>
 <p><a href="diary_03_20.html">2024_03_20</a></p>
 <p><a href="diary_03_21.html">diary_03_21</a></p>
@@ -14,6 +29,27 @@
 <p><a href="diary_03_27.html">diary_03_27</a></p>
 <p><a href="dairy_03_28.html">dairy_03_28</a></p>
 <p><a href="dairy_03_29.html">dairy_03_29</a></p>
-<p>&nbsp;</p>
-</body>
+</div>  
+  
+<p>
+  <script>  
+    function checkPassword() {  
+        var password = document.getElementById("passwordInput").value;  
+        var messageElement = document.getElementById("message");  
+        var contentElement = document.getElementById("content");  
+          
+        if (password === "20041019") {  
+            messageElement.innerText = "Correct password! You can access the site.";  
+            contentElement.style.display = "block"; 
+        } else {  
+            messageElement.innerText = "Incorrect password. Please try again.";  
+            contentElement.style.display = "none"; 
+        }  
+        document.getElementById("passwordInput").value = "";  
+    }  
+  </script>  
+  
+</p>
+<p>please do not view source code&lt;doge&gt;</p>
+</body>  
 </html>
