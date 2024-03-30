@@ -63,12 +63,13 @@
             <p>this is sw</p>
             <p>I am currently reconstructing my website, please wait and see.</p>
             <p>
-              <!-- #BeginDate format:Ch2a -->2024年3月29日  11:18 PM<!-- #EndDate -->
             </p>
-            <p></p>
+            <p>now it's<span id="current-datetime"></span></p>
             <h2>&nbsp;</h2>
         </div>
 </div>
+
+
     <div class="footer">
         <p>nice to meet you    </p>
     </div>
@@ -84,8 +85,21 @@
 			<p>&copy; 2004 sun122</p>
 		</div>
 
-    
 
+<script>  
+        function updateDateTime() {  
+            const now = new Date();  
+            // 使用 toLocaleString 方法来格式化日期和时间  
+            const dateTimeString = now.toLocaleString();  
+            document.getElementById('current-datetime').textContent = dateTimeString;  
+        }  
+  
+        // 设置定时器，每秒更新日期和时间  
+        setInterval(updateDateTime, 1000);  
+  
+        // 页面加载时立即执行一次更新日期和时间操作  
+        updateDateTime();  
+    </script>  
     
 </body>
 </html>
